@@ -1,0 +1,109 @@
+.surgery {
+  padding: 7rem 0;
+  width: 100%;
+  position: relative;
+  font-size: 1.6rem;
+
+  h2 {
+    text-align: center;
+    padding-bottom: 5rem;
+    padding-top: 7rem;
+    @media only screen and (max-width: $bp-smallest) {
+      padding-top: 4rem;
+      padding-bottom: 3rem;
+    }
+    /*&:before {
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      content: "\f060";
+      padding-right: 6rem;
+      right: 24px;
+      transition: 0.2s all;
+      opacity: 1;
+      color: $color-black;
+    }
+    */
+  }
+  p {
+    text-align: justify;
+  }
+  &__content {
+    width: 70%;
+    margin: 0 auto;
+    @media only screen and (max-width: $bp-large) {
+      width: 80%;
+    }
+    @media only screen and (max-width: $bp-smallest) {
+      width: 90%;
+    }
+    h4 {
+      text-align: center;
+      margin-top: 2rem;
+      &:last-child {
+        margin: 5rem 0;
+        text-align: center;
+        color: $color-primary-dark-blue;
+      }
+      @media only screen and (max-width: $bp-smallest) {
+        font-size: 1.8rem;
+        font-weight: 600;
+      }
+    }
+
+    .prepare-pet {
+      margin: 2rem 7rem;
+      text-align: center;
+      background: $color-primary-gray-light;
+      padding: 2rem;
+      @media only screen and (max-width: $bp-smallest) {
+        margin: 1rem 0;
+        padding: 2rem 1.5rem;
+        text-align: justify;
+      }
+    }
+
+    img {
+      width: 50rem;
+      height: 100%;
+      margin-right: 3rem;
+      @media only screen and (max-width: 1500px) {
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom: 3rem;
+      }
+    }
+    .col {
+      display: flex;
+      flex-direction: row;
+      @media only screen and (max-width: 1500px) {
+        flex-direction: column;
+      }
+    }
+    h3 {
+      margin-top: 3rem;
+      margin-bottom: 2rem;
+      @media only screen and (max-width: $bp-smallest) {
+        font-size: 2rem;
+        text-align: center;
+        font-weight: 600;
+      }
+    }
+
+    ul {
+      list-style: none;
+      li {
+        padding-top: 1rem;
+        &:before {
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+          content: "\f105";
+          padding-right: 1rem;
+          right: 24px;
+          transition: 0.2s all;
+          opacity: 1;
+          color: $color-primary-dark-blue;
+        }
+      }
+    }
+  }
+}

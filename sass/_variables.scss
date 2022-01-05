@@ -1,0 +1,36 @@
+// colors
+$color-black: black;
+$color-white: white;
+
+$color-primary-blue: #7dc6be;
+$color-primary-dark-blue: #40a6a0;
+$color-primary-gray: #aaaaaa;
+$color-primary-gray-light: #f0f0f0;
+$color-primary-gray-dark: #3c3c3c;
+// fonts
+
+$font-basic: "Roboto", sans-serif;
+
+$bp-largest: 87.5em; // 1200px
+$bp-large: 68.75em; // 1100px
+$bp-medium: 56.25em; // 900px
+$bp-small: 37.5em; // 600px
+$bp-smallest: 31.25em; // 500px
+
+// box-shadow
+$box-shadow-light: 0 1rem 3rem rgba($color-black, 0.1);
+$box-shadow-dark: 0 0.5rem 0.5rem rgba($color-black, 0.25);
+
+// functions for btn
+@function tint($color, $percentage) {
+  @return mix(white, $color, $percentage);
+}
+
+@function shade($color, $percentage) {
+  @return mix(black, $color, $percentage);
+}
+
+@mixin radial-gradient($from, $to) {
+  background: radial-gradient(center, circle cover, $from 0%, $to 100%);
+  background: -webkit-radial-gradient(center, circle cover, $from 0%, $to 100%);
+}

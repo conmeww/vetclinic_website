@@ -1,0 +1,98 @@
+.all-services {
+  width: 100%;
+
+  text-align: center;
+  h2 {
+    padding-top: 7rem;
+    padding-bottom: 5rem;
+    @media only screen and (max-width: $bp-medium) {
+      padding-top: 4rem;
+      padding-bottom: 3rem;
+    }
+  }
+  &__content {
+    width: 70%;
+    margin: 0 auto;
+    align-items: start;
+    display: grid;
+    grid-gap: 3rem;
+    grid-template-columns: repeat(auto-fit, 300px);
+
+    justify-content: center;
+    padding-bottom: 12rem;
+    @media only screen and (max-width: $bp-small) {
+      width: 90%;
+
+      grid-template-columns: repeat(auto-fit, 150px);
+    }
+    @media only screen and (max-width: $bp-smallest) {
+      grid-template-columns: repeat(auto-fit, 140px);
+      grid-gap: 1.3rem;
+    }
+    .card {
+      background-color: $color-white;
+
+      color: $color-primary-dark-blue;
+
+      padding: 7.5rem 0 5rem;
+      text-align: center;
+
+      transition: 0.3s ease;
+
+      -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.39);
+      -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.39);
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.39);
+      &:hover {
+        background-color: $color-primary-dark-blue;
+        color: $color-white;
+        cursor: pointer;
+      }
+      h3 {
+        padding-top: 1rem;
+        font-size: 2.3rem;
+        font-weight: 300;
+        @media only screen and (max-width: $bp-small) {
+          font-size: 1.8rem;
+        }
+        @media only screen and (max-width: $bp-smallest) {
+          font-size: 1.6rem;
+        }
+      }
+      @media only screen and (max-width: $bp-medium) {
+        padding: 2.5rem 0 2rem;
+        height: 8rem;
+      }
+      @media only screen and (max-width: $bp-smallest) {
+        padding: 2rem 0.5rem;
+      }
+    }
+
+    .fas,
+    .far {
+      font-size: 6rem;
+      @media only screen and (max-width: $bp-medium) {
+        font-size: 4rem;
+      }
+    }
+    a {
+      text-transform: none;
+    }
+  }
+}
+.hero-services {
+  width: 100%;
+
+  background-size: cover;
+  position: relative;
+  display: flex;
+
+  background-image: linear-gradient(
+      to bottom,
+      rgba($color-primary-gray-dark, 0.5)
+    ),
+    url(../img/services_img.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 84vh;
+  align-items: center;
+}

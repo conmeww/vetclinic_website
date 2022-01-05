@@ -1,0 +1,114 @@
+$color-black: black;
+$color-white: white;
+
+$color-primary-blue: #7dc6be;
+$color-primary-dark-blue: #40a6a0;
+$color-primary-gray: #e7e7e7;
+$color-primary-gray-light: #f0f0f0;
+
+$bp-largest: 87.5em; // 1200px
+$bp-large: 68.75em; // 1100px
+$bp-medium: 56.25em; // 900px
+$bp-small: 37.5em; // 600px
+$bp-smallest: 31.25em; // 500px
+
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 10px/16px = 62.5% -> 1rem = 10px
+}
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 1.6;
+  height: 100%;
+  @media only screen and (max-width: $bp-medium) {
+    line-height: 1.2;
+  }
+}
+h1 {
+  font-size: 5.5rem;
+}
+
+h3 {
+  font-size: 3.5rem;
+  font-weight: 300;
+}
+h4 {
+  font-size: 2.5rem;
+  font-weight: 300;
+}
+
+/* BUTTON */
+
+.btn {
+  border: none;
+
+  a {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+
+    background-color: $color-white;
+    border: 2px solid $color-primary-blue;
+    padding: 1rem 3rem;
+
+    text-decoration: none;
+    color: $color-primary-blue;
+    transition: 0.5s ease;
+    &:hover {
+      color: $color-white;
+      background-color: $color-primary-blue;
+    }
+    @media only screen and (max-width: $bp-small) {
+      font-size: 1.6rem;
+    }
+  }
+}
+
+/*
+
+  + 1.sticky nav ( NO smooth )
+  + 2.footer
+  + 7.footer animation
+  + 11. copyright
+  + 9.logo click 
+  + 8. PRICES main add info
+  + 10. count
+  + 3.smooth scroll + smooth pop up
+  + 4.pricing 
+
+
+PAGES 
+1.services + info(menu/tabs..)
+2.contacts
+3.our team
+
+
+
+
+
+5.our specialists
+6.contact form
+
+15.mobile version
+
+
+
+
+MOBILE
+
+header
+footer
+contacts
+
+page surg
+page prices
+
+hero
+
+
+*/

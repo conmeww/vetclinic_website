@@ -1,0 +1,104 @@
+.prices_img {
+  width: 100%;
+
+  background-size: cover;
+  position: relative;
+  display: flex;
+
+  background-image: linear-gradient(
+      to bottom,
+      rgba($color-primary-gray-dark, 0.5)
+    ),
+    url(../img/prices_img.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 84vh;
+  align-items: center;
+}
+.prices {
+  width: 100%;
+
+  text-align: center;
+  padding: 7rem 0;
+  padding-bottom: 20rem;
+  @media only screen and (max-width: $bp-small) {
+    padding: 3rem 0;
+    padding-bottom: 10rem;
+  }
+
+  &__content {
+    width: 70%;
+    margin: 0 auto;
+  }
+  .collapsible {
+    color: $color-black;
+    cursor: pointer;
+    padding: 4rem 2rem;
+    width: 70%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: inherit;
+    background-color: #fff;
+    @media only screen and (max-width: $bp-large) {
+      width: 90%;
+    }
+    @media only screen and (max-width: $bp-medium) {
+      padding: 2rem 1rem;
+    }
+
+    h4 {
+      @media only screen and (max-width: $bp-small) {
+        font-size: 1.8rem;
+      }
+      span {
+        margin-left: 2rem;
+      }
+    }
+  }
+}
+
+.active,
+.collapsible:hover {
+  background-color: $color-primary-gray-light;
+}
+
+.content {
+  font-size: 1.6rem;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-height: 0;
+  background-color: $color-white;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  color: $color-primary-gray-dark;
+  margin: 0 auto;
+  border-bottom: 2px solid $color-primary-blue;
+  @media only screen and (max-width: $bp-large) {
+    width: 90%;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $color-primary-gray-light;
+    }
+  }
+  p {
+    padding: 2rem;
+    margin-bottom: 2rem;
+
+    @media only screen and (max-width: $bp-small) {
+      text-align: initial;
+    }
+    @media only screen and (max-width: $bp-smallest) {
+      padding: 1rem;
+      margin-bottom: 1rem;
+    }
+  }
+}

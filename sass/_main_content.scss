@@ -1,0 +1,606 @@
+.hero {
+  width: 100%;
+
+  background-size: cover;
+  position: relative;
+  display: flex;
+
+  background-image: linear-gradient(
+      to bottom,
+      rgba($color-primary-gray-dark, 0.5)
+    ),
+    url(../img/hero_img.jpg.webp);
+  background-size: cover;
+  background-position: center;
+  height: 84vh;
+  align-items: center;
+  &__content {
+    width: 48%;
+    margin: 0 auto;
+    color: $color-white;
+    text-align: center;
+    @media only screen and (max-width: $bp-large) {
+      width: 90%;
+    }
+    &__main-text {
+      line-height: 6.5rem;
+      font-size: 5.5rem;
+      margin-bottom: 4rem;
+      animation-name: moveInLeft;
+      animation-duration: 1s;
+      animation-timing-function: ease-out;
+      @media only screen and (max-width: $bp-small) {
+        line-height: 3rem;
+        font-size: 3.5rem;
+        animation: none;
+      }
+      @media only screen and (max-width: $bp-smallest) {
+        font-size: 3rem;
+        line-height: 3rem;
+      }
+    }
+    &__sub-text {
+      font-size: 2.3rem;
+      animation-name: moveInRight;
+      animation-duration: 1s;
+      animation-timing-function: ease-out;
+
+      @media only screen and (max-width: $bp-small) {
+        animation: none;
+        font-size: 1.8rem;
+      }
+      @media only screen and (max-width: $bp-smallest) {
+        font-size: 1.6rem;
+      }
+    }
+  }
+}
+
+/* SECTION ABOUT */
+.about--wrapper {
+  width: 100%;
+  .about {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 70%;
+
+    margin: 0 auto;
+    padding: 7rem 0;
+    @media only screen and (max-width: $bp-large) {
+      width: 90%;
+    }
+    @media only screen and (max-width: $bp-medium) {
+      flex-direction: column-reverse;
+    }
+    @media only screen and (max-width: $bp-smallest) {
+      padding: 2rem 0;
+    }
+
+    &__text {
+      width: 70%;
+      h2 {
+        margin-bottom: 6rem;
+        @media only screen and (max-width: $bp-medium) {
+          text-align: center;
+        }
+        @media only screen and (max-width: $bp-smallest) {
+          margin-bottom: 2rem;
+          font-size: 2rem;
+        }
+      }
+      p {
+        font-size: inherit;
+        margin-bottom: 4rem;
+      }
+      @media only screen and (max-width: $bp-medium) {
+        margin: 0 auto;
+        width: 90%;
+      }
+    }
+    &__img {
+      img {
+        width: 90%;
+        @media only screen and (max-width: $bp-medium) {
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}
+.statistic {
+  background-image: url(/img/statistic_img.jpg);
+
+  /* Set a specific height */
+
+  /* Create the parallax scrolling effect */
+  height: 100%;
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  @media only screen and (max-width: $bp-small) {
+    background-image: url(/img/statistic_img.jpg);
+    background-attachment: scroll;
+  }
+
+  &__content {
+    width: 100%;
+
+    background-color: rgba($color-primary-dark-blue, $alpha: 0.7);
+
+    &--boxes {
+      width: 70%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin: 0 auto;
+      @media only screen and (max-width: 1300px) {
+        width: 90%;
+      }
+      @media only screen and (max-width: 800px) {
+        flex-direction: column;
+      }
+      .box {
+        text-align: center;
+        margin: 12rem 0;
+        color: $color-white;
+        font-size: 3rem;
+        width: 100%;
+        padding: 0 4rem;
+        @media only screen and (max-width: $bp-large) {
+          padding: 0 1rem;
+        }
+        @media only screen and (max-width: 800px) {
+          margin: 3rem 0;
+        }
+        p {
+          font-size: 2.3rem;
+          @media only screen and (max-width: $bp-smallest) {
+            font-size: 1.6rem;
+          }
+        }
+        h1 {
+          @media only screen and (max-width: $bp-smallest) {
+            font-size: 2.5rem;
+          }
+        }
+        .count {
+          font-size: 6rem;
+          margin: 2rem 0;
+        }
+
+        &:not(:last-child) {
+          border-right: 1px solid $color-white;
+          @media only screen and (max-width: 800px) {
+            border: none;
+          }
+        }
+      }
+    }
+    @media only screen and (max-width: 800px) {
+      height: 100%;
+    }
+  }
+}
+/* SERVICES */
+.services {
+  width: 100%;
+  &__content {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 7rem 0;
+    @media only screen and (max-width: $bp-smallest) {
+      width: 90%;
+    }
+    h2 {
+      margin-bottom: 6rem;
+    }
+    span {
+      color: $color-primary-blue;
+      font-weight: 600;
+
+      &::after {
+        content: "";
+        height: 1px;
+        width: 30%;
+        background-color: $color-primary-gray;
+        display: block;
+        margin: 0 auto;
+        margin-top: 3rem;
+      }
+    }
+    &--box-container {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      .info-box {
+        width: 33%;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        @media only screen and (max-width: 800px) {
+          width: 60%;
+          margin-bottom: 2rem;
+        }
+        @media only screen and (max-width: $bp-smallest) {
+          width: 100%;
+        }
+
+        h4 {
+          margin-bottom: 2.5rem;
+          @media only screen and (max-width: $bp-smallest) {
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+          }
+        }
+        p {
+          text-align: center;
+        }
+        img {
+          height: 5rem;
+        }
+      }
+      @media only screen and (max-width: 800px) {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+      }
+    }
+    @media only screen and (max-width: $bp-large) {
+      width: 90%;
+    }
+  }
+}
+
+/* BASIC PRICES */
+.basic-prices {
+  width: 100%;
+  &__content {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 7rem 0;
+    @media only screen and (max-width: 1800px) {
+      width: 90%;
+    }
+    @media only screen and (max-width: $bp-smallest) {
+      padding: 0;
+    }
+
+    h2 {
+      margin-bottom: 6rem;
+      @media only screen and (max-width: 800px) {
+        margin-bottom: 3rem;
+      }
+    }
+    &--boxes {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      @media only screen and (max-width: 1400px) {
+        flex-direction: column;
+      }
+    }
+    .price-box {
+      width: 30%;
+      border: 1px solid $color-primary-gray-light;
+      box-shadow: $box-shadow-dark;
+      height: 550px;
+      @media only screen and (max-width: 1400px) {
+        margin: 5rem 0;
+        width: 100%;
+        height: 400px;
+      }
+      @media only screen and (max-width: 800px) {
+        border: none;
+        height: 400px;
+      }
+      @media only screen and (max-width: $bp-small) {
+        height: 400px;
+      }
+      @media only screen and (max-width: $bp-smallest) {
+        height: 350px;
+        margin: 0;
+        margin: 3rem 0;
+      }
+
+      h4 {
+        padding: 2.5rem 0;
+        color: $color-white;
+        background-image: linear-gradient(
+            to bottom,
+            rgba($color-primary-dark-blue, 0.7)
+          ),
+          url(/img/statistic_img.jpg);
+        background-size: cover;
+        background-position: center;
+        @media only screen and (max-width: $bp-smallest) {
+          font-size: 1.8rem;
+        }
+      }
+      h1 {
+        color: $color-primary-dark-blue;
+        font-weight: 100;
+
+        border-top: 1px solid $color-primary-gray-light;
+
+        padding-top: 2rem;
+        margin-bottom: 2rem;
+        @media only screen and (max-width: 800px) {
+          border: none;
+          padding-top: 8rem;
+        }
+        @media only screen and (max-width: $bp-smallest) {
+          padding-top: 0;
+          font-size: 3rem;
+        }
+      }
+      p {
+        height: 38%;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        padding-top: 4rem;
+        @media only screen and (max-width: 1400px) {
+          height: 15%;
+        }
+        @media only screen and (max-width: $bp-smallest) {
+          padding: 1rem;
+          height: auto;
+        }
+      }
+      .fas {
+        font-size: 2rem;
+      }
+
+      &:last-child {
+        @media only screen and (max-width: $bp-smallest) {
+          height: 420px;
+        }
+      }
+    }
+  }
+  .btn {
+    @media only screen and (max-width: 1400px) {
+      margin: 0 3rem;
+    }
+    @media only screen and (max-width: $bp-smallest) {
+      margin: 0;
+    }
+  }
+}
+/* REVIEWS */
+.reviews {
+  width: 100%;
+  background-image: linear-gradient(
+      to bottom,
+      rgba($color-primary-dark-blue, 0.8)
+    ),
+    url(/img/reviews.jpg);
+  background-size: cover;
+  background-position: top;
+  margin: 7rem 0;
+
+  &__content {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 3rem 0;
+    color: $color-white;
+    @media only screen and (max-width: $bp-small) {
+      padding: 0;
+      padding-top: 3rem;
+    }
+  }
+}
+.owl-carousel {
+  position: relative;
+  width: 50%;
+  margin: 0 auto;
+  .owl-item {
+    background-color: transparent;
+  }
+  .owl-nav {
+    button.owl-prev,
+    button.owl-next {
+      font-size: 7rem;
+      position: absolute;
+      color: $color-primary-gray-light;
+      &:hover {
+        background-color: transparent;
+
+        color: $color-white;
+      }
+    }
+    button.owl-next {
+      top: 6%;
+      left: 100%;
+    }
+    button.owl-prev {
+      top: 6%;
+      left: -10%;
+    }
+  }
+  .carousel-item {
+    margin: 3rem 0;
+    color: $color-white;
+    text-align: center;
+
+    .sub-text {
+      text-transform: uppercase;
+      color: $color-primary-dark-blue;
+      font-weight: 600;
+      margin-top: -1rem;
+    }
+    .review {
+      margin: 3.5rem 0;
+      &::before {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        content: "\f10d";
+        font-family: FontAwesome;
+        font-size: 8rem;
+        opacity: 0.6;
+        font-style: normal;
+        color: #40a6a0;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        z-index: -1;
+      }
+      @media only screen and (max-width: $bp-small) {
+        margin: 0;
+      }
+    }
+  }
+  @media only screen and (max-width: $bp-large) {
+    width: 90%;
+  }
+}
+/* CONTACTS */
+.contacts {
+  width: 100%;
+  background-color: $color-white;
+  &__content {
+    width: 70%;
+    margin: 0 auto;
+
+    text-align: center;
+    @media only screen and (max-width: $bp-large) {
+      width: 90%;
+    }
+
+    .col {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      position: relative;
+      &--1 {
+        img {
+          position: absolute;
+          width: 40%;
+          bottom: 0;
+          @media only screen and (max-width: $bp-medium) {
+            display: none;
+          }
+        }
+      }
+      &--2 {
+        width: 50%;
+        background: $color-white;
+        border: 1px solid $color-primary-gray-light;
+        box-shadow: $box-shadow-dark;
+        padding: 3rem;
+        margin-bottom: 7rem;
+        @media only screen and (max-width: $bp-medium) {
+          width: 70%;
+          margin: 0 auto;
+          margin-bottom: 6rem;
+        }
+        @media only screen and (max-width: $bp-smallest) {
+          width: 100%;
+          padding: 2rem 0;
+        }
+
+        h2 {
+          @media only screen and (max-width: $bp-smallest) {
+            font-size: 2rem;
+          }
+        }
+        .contact {
+          h4 {
+            color: $color-primary-blue;
+
+            margin: 0 auto;
+            margin-bottom: 3rem;
+            margin-top: 3rem;
+            @media only screen and (max-width: $bp-smallest) {
+              font-size: 1.8rem;
+              margin: 1.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  fieldset {
+    border: medium none;
+    margin: 0 0 10px;
+
+    width: 100%;
+    &:last-child {
+      margin-top: 3rem;
+    }
+  }
+
+  .contact input[type="email"],
+  .contact input[type="tel"],
+  .contact input[type="url"],
+  .contact textarea {
+    width: 70%;
+    border: 1px solid $color-primary-gray;
+    background: #fff;
+    margin: 0 0 5px;
+    padding: 10px;
+    font-family: inherit;
+  }
+
+  .contact input[type="text"]:hover,
+  .contact input[type="email"]:hover,
+  .contact input[type="tel"]:hover,
+  .contact input[type="url"]:hover,
+  .contact textarea:hover {
+    -webkit-transition: border-color 0.3s ease-in-out;
+    -moz-transition: border-color 0.3s ease-in-out;
+    transition: border-color 0.3s ease-in-out;
+    border: 1px solid $color-primary-gray;
+  }
+
+  .contact textarea {
+    height: 100px;
+    max-width: 100%;
+    resize: none;
+  }
+
+  .contact {
+    .contact input:focus,
+    .contact h3 {
+      .contact textarea:focus {
+        outline: 0;
+        border: 1px solid $color-primary-gray;
+      }
+      ::-webkit-input-placeholder {
+        color: $color-primary-gray;
+
+        :-moz-placeholder {
+          color: $color-primary-gray;
+        }
+        ::-moz-placeholder {
+          color: $color-primary-gray;
+        }
+        :-ms-input-placeholder {
+          color: $color-primary-gray;
+        }
+      }
+    }
+  }
+}
+
+.section {
+  transition: transform 1s, opacity 1s;
+  @media only screen and (max-width: $bp-small) {
+    transition: none;
+  }
+}
+.section--hidden {
+  opacity: 0;
+  transform: translateY(12rem);
+  @media only screen and (max-width: $bp-small) {
+    opacity: 1;
+    transform: none;
+  }
+}
